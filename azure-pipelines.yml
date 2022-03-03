@@ -28,12 +28,12 @@ steps:
     goals: 'spring-boot:build-image'
     publishJUnitResults: false
     jdkVersionOption: '1.11'
-    mavenOptions: '-Xmx3072m -Dspring-boot.build-image.imageName=pcregi.azurecr.io/my/container'
+    mavenOptions: '-Xmx3072m -Dspring-boot.build-image.imageName=nonoregi.azurecr.io/myContainer'
 
 - task: Docker@2
   displayName: Push Docker Image
   inputs:
-    containerRegistry: 'pet_clinic_service_connection'
-    repository: 'my/container'
+    containerRegistry: 'nono_service_connection'
+    repository: 'myContainer'
     command: 'push'
     tags: 'latest'
