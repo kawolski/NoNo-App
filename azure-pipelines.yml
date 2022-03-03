@@ -34,6 +34,6 @@ steps:
   displayName: Push Docker Image
   inputs:
     containerRegistry: 'nono_service_connection'
-    repository: 'myContainer'
+    repository: 'mycontainer'
     command: 'push'
     tags: 'latest'
